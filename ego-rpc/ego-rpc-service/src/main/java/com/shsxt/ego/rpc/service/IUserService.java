@@ -7,4 +7,8 @@ public interface IUserService {
     public TbUser queryUserByUserId(Long userId);
 
     EgoResult userCheck(String param, Integer type);
+
+    EgoResult saveUser(TbUser user);
+
+    public TbUser queryUserByuserName(String userName);
 }

@@ -29,4 +29,15 @@ public class UserServiceImpl implements IUserService {
         return egoResult;
     }
 
+    @Override
+    public EgoResult saveUser(TbUser user) {
+        userMapper.insertSelective(user);
+        return new EgoResult();
+    }
+
+    @Override
+    public TbUser queryUserByuserName(String userName) {
+        return userMapper.userCheck(userName,1);
+    }
+
 }

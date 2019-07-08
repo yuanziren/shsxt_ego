@@ -20,7 +20,7 @@
     <!-- 客户端连接工厂 -->
     <bean id="jedisConnFactory"
           class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory"
-          p:use-pool="true" p:host-name="192.168.10.20" p:port="6379" p:password="123456">
+          p:use-pool="true" p:host-name="192.168.111.240" p:port="6379" p:password="123456">
         <!-- 连接池引用 -->
         <constructor-arg name="poolConfig" ref="jedisPoolConfig"/>
     </bean>
