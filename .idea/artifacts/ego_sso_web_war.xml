@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="ego-sso-web:war">
+    <output-path>$PROJECT_DIR$/ego-sso-web/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>ego-sso-web</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="ego-sso-web.war">
+      <element id="artifact" artifact-name="ego-sso-web:war exploded" />
+    </root>
+  </artifact>
+</component>
