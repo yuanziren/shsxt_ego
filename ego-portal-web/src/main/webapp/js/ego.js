@@ -36,7 +36,7 @@ var TT = TAOTAO = {
 				type : "GET",
 				success : function(data){
 					if(data.status == 200){
-						 location.href='http://localhost:8081';
+						 location.href='http://localhost:8083/login';
 					}
 				}
 			});

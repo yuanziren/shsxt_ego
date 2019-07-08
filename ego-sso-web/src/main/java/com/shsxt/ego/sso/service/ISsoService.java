@@ -13,4 +13,8 @@ public interface ISsoService {
     EgoResult saveUser(TbUser user);
 
     EgoResult loginCheck(String username, String password, HttpServletRequest request, HttpServletResponse response);
+
+    EgoResult userInfo(String token);
+
+    EgoResult userLogout(String token, HttpServletRequest request, HttpServletResponse response);
 }

@@ -70,4 +70,19 @@ public class SsoServiceImpl implements ISsoService {
         result.setMsg("用户登录成功");
         return result;
     }
+
+    @Override
+    public EgoResult userInfo(String token) {
+        TbUser user=JsonUtils.jsonToPojo((String)redisTemplate.opsForValue().get(token),TbUser.class);
+        EgoResult result =new EgoResult();
+        result.setData(user);
+        return result;
+    }
+
+    @Override
+    public EgoResult userLogout(String token,HttpServletRequest request,HttpServletResponse response) {
+        redisTemplate.delete(token);
+        CookieUtils.deleteCookie(request,response,token);
+        return new EgoResult();
+    }
 }

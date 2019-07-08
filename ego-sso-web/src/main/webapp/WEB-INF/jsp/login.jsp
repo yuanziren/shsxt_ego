@@ -80,7 +80,7 @@
 						alert("登录成功！");
 						if (redirectUrl == "") {
 							//重定向到ego的门户首页
-							location.href = "http://localhost:8081/";
+							location.href = "http://localhost:8071/index";
 						} else {
 							location.href = redirectUrl;
 						}
