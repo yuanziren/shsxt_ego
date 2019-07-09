@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/ego-cat-web/ego-cat-web.iml" filepath="$PROJECT_DIR$/ego-cat-web/ego-cat-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/ego-code-generate/ego-code-generate.iml" filepath="$PROJECT_DIR$/ego-code-generate/ego-code-generate.iml" />
       <module fileurl="file://$PROJECT_DIR$/ego-common/ego-common.iml" filepath="$PROJECT_DIR$/ego-common/ego-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/ego-manager-web/ego-manager-web.iml" filepath="$PROJECT_DIR$/ego-manager-web/ego-manager-web.iml" />

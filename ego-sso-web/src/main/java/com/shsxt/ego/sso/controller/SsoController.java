@@ -43,6 +43,7 @@ public class SsoController {
     public MappingJacksonValue userInfo(@PathVariable String token, @RequestParam(required = false) String  callback){
         EgoResult result=ssoService.userInfo(token);
         MappingJacksonValue value =new MappingJacksonValue(result);
+        System.out.println(value);
         if(!StringUtils.isEmpty(callback)){
             value.setJsonpFunction(callback);
         }

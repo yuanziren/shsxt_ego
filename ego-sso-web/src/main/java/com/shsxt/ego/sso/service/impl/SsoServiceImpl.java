@@ -66,8 +66,9 @@ public class SsoServiceImpl implements ISsoService {
         /**
          *  将token响应给客户端
          */
-        CookieUtils.setCookie(request,response,"ss0_token",token);
+        CookieUtils.setCookie(request,response,"sso_token",token);
         result.setMsg("用户登录成功");
+        result.setData(token);
         return result;
     }
 

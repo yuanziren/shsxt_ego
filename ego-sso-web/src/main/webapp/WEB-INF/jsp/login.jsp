@@ -58,8 +58,10 @@
         </div>
     </div>
 </form>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
 <script type="text/javascript">
-	var redirectUrl = "${redirect}";
+	var redirectUrl = "${param.redirect}";
+	alert(redirectUrl);
 	var LOGIN = {
 			checkInput:function() {
 				if ($("#loginname").val() == "") {
@@ -78,6 +80,7 @@
 				$.post("/user/login", $("#formlogin").serialize(),function(data){
 					if (data.status == 200) {
 						alert("登录成功！");
+						$.cookie("sso_token",data.data);// 用户登录成功后写入cookie
 						if (redirectUrl == "") {
 							//重定向到ego的门户首页
 							location.href = "http://localhost:8071/index";

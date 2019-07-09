@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-		 pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"%>
 <script type="text/javascript" src="/js/base-v1.js" charset="utf-8"></script>
 <!--shortcut start-->
 <jsp:include page="shortcut.jsp" />
@@ -22,8 +22,8 @@
 		<!--search end-->
 		<div id="my360buy-2013">
 			<dl>
-				<dt class="ld"><s></s><a href="http://localhost:8071/user/showLogin"
-										 clstag="homepage|keycount|home2012|04a">我的易购</a><b></b></dt>
+				<dt class="ld"><s></s><a href="http://localhost:8084/user/showLogin" 
+				clstag="homepage|keycount|home2012|04a">我的易购</a><b></b></dt>
 				<dd>
 					<div class="loading-style1"><b></b>加载中，请稍候...</div>
 				</dd>
@@ -33,12 +33,12 @@
 		<div id="settleup-2013" clstag="homepage|keycount|home2013|05a">
 			<dl>
 				<dt class="ld"><s></s><span class="shopping"><span id="shopping-amount"></span></span><a href="/cart/cart.html" id="settleup-url">去购物车结算</a> <b></b> </dt>
-				<!-- 				<dd>
-                                    <div class="prompt">
-                                        <div class="loading-style1"><b></b>加载中，请稍候...</div>
-                                    </div>
-                                </dd>
-                 -->			</dl>
+<!-- 				<dd>
+					<div class="prompt">
+						<div class="loading-style1"><b></b>加载中，请稍候...</div>
+					</div>
+				</dd>
+ -->			</dl>
 		</div>
 		<!--settleup end-->
 	</div>
@@ -47,11 +47,11 @@
 		<div id="nav-2013">
 			<div id="categorys-2013" class="categorys-2014">
 				<div class="mt ld">
-					<h2><a href="#"
-						   clstag="homepage|keycount|home2013|06a">全部商品分类<b></b></a></h2>
+					<h2><a href="#" 
+					clstag="homepage|keycount|home2013|06a">全部商品分类<b></b></a></h2>
 				</div>
 				<div id="_JD_ALLSORT" class="mc">
-					<div class="item fore1">
+					<%--<div class="item fore1">
 						<span data-split="1"><h3>
 								<a href="/products/1.html">图书、音像、电子书刊</a>
 							</h3>
@@ -134,26 +134,26 @@
 								<a href="/products/749.html">服饰内衣</a>
 							</h3>
 							<s></s></span>
-					</div>
+					</div>--%>
 					<div class="extra">
 						<a {if="" pageconfig.ishome}clstag="homepage|keycount|home2013|0614a"
-						   {="" if}="" href="http://www.jd.com/allSort.aspx">全部商品分类</a>
+							{="" if}="" href="http://www.jd.com/allSort.aspx">全部商品分类</a>
 					</div>
 				</div>
 			</div>
 			<div id="treasure" clstag="homepage|keycount|home2013|08a"></div>
-			<ul id="navitems-2013">
-				<li class="fore1" id="nav-home" clstag="homepage|keycount|home2013|07a"><a href="/">首页</a></li>
-				<li class="fore2" id="nav-fashion" clstag="homepage|keycount|home2013|07b"><a href="http://fashion.jd.com/">服装城</a></li>
-				<li class="fore3" id="nav-chaoshi" clstag="homepage|keycount|home2013|07c"><a href="http://channel.jd.com/chaoshi.html">食品</a></li>
-				<li class="fore4" id="nav-tuan" clstag="homepage|keycount|home2013|07d"><a href="http://tuan.jd.com/" target="_blank">团购</a></li>
-				<li class="fore5" id="nav-auction" clstag="homepage|keycount|home2013|07e"><a href="http://auction.jd.com/">夺宝岛</a></li>
-				<li class="fore6" id="nav-shan" clstag="homepage|keycount|home2013|07f"><a href="http://red.jd.com/" target="_blank">闪购</a></li>
-				<li class="fore7" id="nav-jinrong" clstag="homepage|keycount|home2013|07g1"><a href="http://jr.jd.com/" target="_blank">金融</a></li>
-			</ul>
+				<ul id="navitems-2013">
+					<li class="fore1" id="nav-home" clstag="homepage|keycount|home2013|07a"><a href="/">首页</a></li>
+					<li class="fore2" id="nav-fashion" clstag="homepage|keycount|home2013|07b"><a href="http://fashion.jd.com/">服装城</a></li>
+					<li class="fore3" id="nav-chaoshi" clstag="homepage|keycount|home2013|07c"><a href="http://channel.jd.com/chaoshi.html">食品</a></li>
+					<li class="fore4" id="nav-tuan" clstag="homepage|keycount|home2013|07d"><a href="http://tuan.jd.com/" target="_blank">团购</a></li>
+					<li class="fore5" id="nav-auction" clstag="homepage|keycount|home2013|07e"><a href="http://auction.jd.com/">夺宝岛</a></li>
+					<li class="fore6" id="nav-shan" clstag="homepage|keycount|home2013|07f"><a href="http://red.jd.com/" target="_blank">闪购</a></li>
+					<li class="fore7" id="nav-jinrong" clstag="homepage|keycount|home2013|07g1"><a href="http://jr.jd.com/" target="_blank">金融</a></li>
+				</ul>
 		</div>
 	</div>
 </div>
 <script type="text/javascript">
-	(function(){if(pageConfig.navId){var object=document.getElementById("nav-"+pageConfig.navId);if(object)object.className+=" curr";}})();
+(function(){if(pageConfig.navId){var object=document.getElementById("nav-"+pageConfig.navId);if(object)object.className+=" curr";}})();
 </script>
