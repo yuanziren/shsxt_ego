@@ -7,7 +7,7 @@
         <packaging>war</packaging>
       </options>
     </properties>
-    <root id="archive" name="ego-cat-web.war">
+    <root id="archive" name="ego-cart-web.war">
       <element id="artifact" artifact-name="ego-cat-web:war exploded" />
     </root>
   </artifact>
