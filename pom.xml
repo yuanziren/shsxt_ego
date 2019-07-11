@@ -52,6 +52,13 @@
         <log4j.version>1.2.17</log4j.version>
         <aspectj.version>1.8.2</aspectj.version>
         <aopalliance.version>1.0</aopalliance.version>
+
+        <aliyun.sms.version>4.0.3</aliyun.sms.version>
+
+        <!--
+           mq 坐标配置
+        -->
+        <spring.rabbit.version>1.6.5.RELEASE</spring.rabbit.version>
     </properties>
 
     <!-- 只定义依赖的版本，并不实际依赖 -->
@@ -278,6 +285,18 @@
                 <groupId>org.apache.httpcomponents</groupId>
                 <artifactId>httpcore</artifactId>
                 <version>${httpcomponents.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.aliyun</groupId>
+                <artifactId>aliyun-java-sdk-core</artifactId>
+                <version>${aliyun.sms.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.amqp</groupId>
+                <artifactId>spring-rabbit</artifactId>
+                <version>${spring.rabbit.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

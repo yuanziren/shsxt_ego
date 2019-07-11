@@ -6,6 +6,7 @@ import com.shsxt.ego.common.util.JsonUtils;
 import com.shsxt.ego.rpc.pojo.TbUser;
 import com.shsxt.ego.rpc.service.IUserService;
 import com.shsxt.ego.sso.service.ISsoService;
+import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.util.DigestUtils;
@@ -18,6 +19,9 @@ import java.util.UUID;
 
 @Service
 public class SsoServiceImpl implements ISsoService {
+
+    @Resource
+    private AmqpTemplate template;
 
     @Resource
     public IUserService userServiceProxy;
@@ -35,7 +39,9 @@ public class SsoServiceImpl implements ISsoService {
         user.setCreated(new Date());
         user.setUpdated(new Date());
         user.setPassword(DigestUtils.md5DigestAsHex(user.getPassword().getBytes()));
-        return userServiceProxy.saveUser(user);
+        userServiceProxy.saveUser(user);
+        template.convertAndSend(user.getPhone()+"&"+2000);
+        return new EgoResult();
     }
 
     @Override

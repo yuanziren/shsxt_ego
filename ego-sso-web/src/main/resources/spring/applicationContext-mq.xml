@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:rabbit="http://www.springframework.org/schema/rabbit"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+	    http://www.springframework.org/schema/rabbit
+	    http://www.springframework.org/schema/rabbit/spring-rabbit.xsd" >
+    <!--配置connectionFactory -->
+    <rabbit:connection-factory id="rabbitConnectionFactory" host="127.0.0.1"
+                               username="yuanziren" password="123456"  virtual-host="/yuanziren" />
+    <!--配置RabbitAdmin -->
+    <rabbit:admin connection-factory="rabbitConnectionFactory"/>
+    <!--配置Template操作mq -->
+    <rabbit:template id="amqpTemplate" connection-factory="rabbitConnectionFactory"
+                     exchange="ego_exchange" routing-key="ego.sms.sendSms"/>
+    <!--配置Exchange -->
+    <rabbit:topic-exchange name="ego_exchange">
+        <rabbit:bindings>
+            <rabbit:binding queue="ego_sms" pattern="ego.sms.*" />
+           <!-- <rabbit:binding queue="ego_mail" pattern="ego.mail.*" />-->
+        </rabbit:bindings>
+    </rabbit:topic-exchange>
+
+    <!--配置Queue -->
+    <rabbit:queue name="ego_sms" />
+
+  <!--  <rabbit:queue name="ego_mail" />-->
+    <!--配置listener and container进行pojo的解析 -->
+    <rabbit:listener-container connection-factory="rabbitConnectionFactory">
+        <rabbit:listener ref="smsListener" method="listen" queue-names="ego_sms" />
+        <!--<rabbit:listener ref="smsListener" method="mailListen" queue-names="ego_mail" />-->
+    </rabbit:listener-container>
+</beans>
