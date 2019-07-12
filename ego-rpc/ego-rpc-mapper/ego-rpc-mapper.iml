@@ -19,5 +19,6 @@
     <orderEntry type="module" module-name="ego-rpc-pojo" />
     <orderEntry type="module" module-name="ego-rpc-service" />
     <orderEntry type="library" name="Maven: org.mybatis:mybatis:3.2.8" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty:3.10.6.Final" level="project" />
   </component>
 </module>

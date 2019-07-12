@@ -12,6 +12,7 @@
       <module fileurl="file://$PROJECT_DIR$/ego-rpc/ego-rpc-pojo/ego-rpc-pojo.iml" filepath="$PROJECT_DIR$/ego-rpc/ego-rpc-pojo/ego-rpc-pojo.iml" />
       <module fileurl="file://$PROJECT_DIR$/ego-rpc/ego-rpc-service/ego-rpc-service.iml" filepath="$PROJECT_DIR$/ego-rpc/ego-rpc-service/ego-rpc-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/ego-rpc/ego-rpc-service-impl/ego-rpc-service-impl.iml" filepath="$PROJECT_DIR$/ego-rpc/ego-rpc-service-impl/ego-rpc-service-impl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ego-search-web/ego-search-web.iml" filepath="$PROJECT_DIR$/ego-search-web/ego-search-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/ego-sso-web/ego-sso-web.iml" filepath="$PROJECT_DIR$/ego-sso-web/ego-sso-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/myego.iml" filepath="$PROJECT_DIR$/.idea/myego.iml" />
     </modules>
